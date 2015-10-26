@@ -11,9 +11,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
-Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'taglist.vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
@@ -45,13 +44,6 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 nnoremap <C-P> :set invpaste paste? <CR>
-
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
-autocmd VimEnter * AirlineToggleWhitespace
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
@@ -60,5 +52,6 @@ let g:airline_theme='molokai'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:netrw_liststyle=3
+autocmd VimEnter * AirlineToggleWhitespace
 set laststatus=2
 set ttimeoutlen=50
