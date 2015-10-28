@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-"Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
@@ -25,7 +25,8 @@ let mapleader = "\<Space>"
 set encoding=utf-8
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
-nmap <leader>k :e.<cr>
+"nmap <leader>k :e.<cr>
+nmap <leader>k :NERDTreeToggle<CR>
 nnoremap <leader>, :nohlsearch<CR>
 nnoremap <leader>s :mksession!<CR>
 set autoread
@@ -60,5 +61,6 @@ let g:airline_theme='molokai'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:netrw_liststyle=3
+let NERDTreeWinSize=25
 set laststatus=2
 set ttimeoutlen=50
