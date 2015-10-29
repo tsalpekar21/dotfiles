@@ -12,6 +12,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'taglist.vim'
 
