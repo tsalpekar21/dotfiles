@@ -13,7 +13,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 "Plugin 'taglist.vim'
 
 call vundle#end()
@@ -39,6 +39,13 @@ set showmatch
 set incsearch
 set hlsearch
 set noswapfile
+
+nmap <leader>q :q<CR>
+nnoremap <leader>w :w!<CR>
+nnoremap <Leader>W :%s/\s\+$//<CR>:let @/=''<CR>
+nnoremap <c-f> gg=G
+map <Leader>v :nt ~/.vimrc<CR>
+autocmd! bufwritepost .vimrc source % 
 
 "Past mode for pasting in insert mode
 nnoremap <C-P> :set invpaste paste? <CR>
