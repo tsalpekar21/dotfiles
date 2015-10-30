@@ -42,6 +42,7 @@ set noswapfile
 
 nmap <leader>q :q<CR>
 nnoremap <leader>w :w!<CR>
+nnoremap <leader>x :xa<CR>
 nnoremap <Leader>W :%s/\s\+$//<CR>:let @/=''<CR>
 nnoremap <c-f> gg=G
 map <Leader>v :nt ~/.vimrc<CR>
