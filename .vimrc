@@ -45,7 +45,7 @@ nnoremap <leader>w :w!<CR>
 nnoremap <leader>x :xa<CR>
 nnoremap <Leader>W :%s/\s\+$//<CR>:let @/=''<CR>
 nnoremap <c-f> gg=G
-map <Leader>v :nt ~/.vimrc<CR>
+map <Leader>v :tabe ~/.vimrc<CR>
 autocmd! bufwritepost .vimrc source % 
 
 "Past mode for pasting in insert mode
