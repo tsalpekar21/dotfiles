@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -47,6 +48,7 @@ nnoremap <Leader>W :%s/\s\+$//<CR>:let @/=''<CR>
 nnoremap <c-f> gg=G
 map <Leader>v :tabe ~/.vimrc<CR>
 autocmd! bufwritepost .vimrc source % 
+nnoremap <leader>r :e!<CR>
 
 "Past mode for pasting in insert mode
 nnoremap <C-P> :set invpaste paste? <CR>
