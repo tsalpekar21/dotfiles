@@ -21,7 +21,7 @@ function CheckAndCreateFiles {
 
   # Create symlink between home dir config file and dotfiles config file
   if ln -sf ~/dotfiles/$CONFIG_FILE ~/$CONFIG_FILE  
-    then echo "Created link: $CONFIG_FILE" 
+    then echo "Created link: $CONFIG_FILE" source $CONFIG_FILE 
     else echo "Link creation failed: $CONFIG_FILE" ; 
   fi 
 
