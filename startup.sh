@@ -36,7 +36,7 @@ function InstallVundle {
       echo 'Vundle is already installed on system' 
       echo '';
       MoveColors
-      MoveBundle
+      echo `vim +PluginInstall +qall`
       return 1;
     else 
 
@@ -62,13 +62,6 @@ function MoveColors {
   echo 'Moving colors directory...'
   cp -R ~/dotfiles/colors ~/.vim/colors
   if [ -d ~/.vim/colors ] ; then echo 'Copied colors successfully' ; else echo 'Failed on copying colors' ; fi
-  echo "-----------------"
-}
-
-function MoveBundle {
-  echo 'Moving bundle of plugins...' 
-  cp -R ~/dotfiles/bundle ~/.vim/bundle
-  if [ -d ~/.vim/bundle ] ; then echo 'Copied bundle successfully' ; else echo 'Failed on copying bundle' ; fi
   echo "-----------------"
 }
 
