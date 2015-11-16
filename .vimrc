@@ -14,7 +14,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 "Plugin 'taglist.vim'
 
 call vundle#end()
@@ -49,6 +49,9 @@ nnoremap <c-f> gg=G
 map <Leader>v :tabe ~/.vimrc<CR>
 autocmd! bufwritepost .vimrc source % 
 nnoremap <leader>r :e!<CR>
+
+"Add mouse support
+set mouse=a
 
 "Past mode for pasting in insert mode
 nnoremap <C-P> :set invpaste paste? <CR>
