@@ -40,6 +40,7 @@ set showmatch
 set incsearch
 set hlsearch
 set noswapfile
+set shiftwidth=2
 
 nmap <leader>q :q<CR>
 nnoremap <leader>w :w!<CR>
