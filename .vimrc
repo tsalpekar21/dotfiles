@@ -14,7 +14,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 "Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/MatchTagAlways'
 "Plugin 'taglist.vim'
 
@@ -53,6 +53,12 @@ nnoremap <c-f> gg=G
 map <Leader>v :tabe ~/.vimrc<CR>
 autocmd! bufwritepost .vimrc source % 
 nnoremap <leader>r :e!<CR>
+
+" Go to tab by number
+noremap <leader>1 :tabprevious<CR>
+noremap <leader>2 :tabnext<CR>
+noremap <leader>3 :tabm -1<CR>
+noremap <leader>4 :tabm +1<CR>
 
 "Add mouse support
 set mouse=a
