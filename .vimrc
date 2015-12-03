@@ -12,9 +12,10 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
-Plugin 'christoomey/vim-tmux-navigator'
+"Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/MatchTagAlways'
 "Plugin 'taglist.vim'
 
 call vundle#end()
@@ -41,7 +42,6 @@ set incsearch
 set hlsearch
 set noswapfile
 set shiftwidth=2
-
 set ttyfast
 set lazyredraw
 
