@@ -40,6 +40,10 @@ set showmatch
 set incsearch
 set hlsearch
 set noswapfile
+set shiftwidth=2
+
+set ttyfast
+set lazyredraw
 
 nmap <leader>q :q<CR>
 nnoremap <leader>w :w!<CR>
