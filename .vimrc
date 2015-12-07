@@ -16,6 +16,8 @@ Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/MatchTagAlways'
+Plugin 'tpope/vim-surround'
+Plugin 'wikitopian/hardmode'
 Plugin 'taglist.vim'
 
 call vundle#end()
@@ -34,7 +36,7 @@ set autoread
 set tabstop=2
 set softtabstop=2
 set expandtab
-set number
+set relativenumber
 set cursorline 
 set wildmenu
 set showmatch
@@ -53,6 +55,9 @@ nnoremap <c-f> gg=G
 map <Leader>v :tabe ~/.vimrc<CR>
 autocmd! bufwritepost .vimrc source % 
 nnoremap <leader>r :e!<CR>
+
+" Enable hardmode by default
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " Go to tab by number
 noremap <leader>1 :tabprevious<CR>
