@@ -19,6 +19,7 @@ Plugin 'Valloric/MatchTagAlways'
 Plugin 'tpope/vim-surround'
 Plugin 'wikitopian/hardmode'
 Plugin 'taglist.vim'
+Plugin 'Raimondi/delimitMate'
 
 call vundle#end()
 filetype plugin indent on
@@ -55,6 +56,9 @@ nnoremap <c-f> gg=G
 map <Leader>v :tabe ~/.vimrc<CR>
 autocmd! bufwritepost .vimrc source % 
 nnoremap <leader>r :e!<CR>
+
+" Map ; to :
+nmap ; :
 
 " Enable hardmode by default
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
