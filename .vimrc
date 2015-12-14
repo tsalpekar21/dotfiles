@@ -25,7 +25,7 @@ call vundle#end()
 filetype plugin indent on
 
 syntax enable
-color dracula
+color Monokai
 let mapleader = "\<Space>"
 set encoding=utf-8
 let g:ctrlp_map = '<leader>p'
@@ -37,7 +37,6 @@ set autoread
 set tabstop=2
 set softtabstop=2
 set expandtab
-set relativenumber
 set cursorline 
 set wildmenu
 set showmatch
@@ -45,23 +44,47 @@ set incsearch
 set hlsearch
 set noswapfile
 set shiftwidth=2
+
+" Supress conf error for YouCompleteMe
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+
+" Set faster vim scrolling
 set ttyfast
 set lazyredraw
 
+" Set quit and write to files shortcuts to <leader>q or <leader>w
 nmap <leader>q :q<CR>
 nnoremap <leader>w :w!<CR>
 nnoremap <leader>x :xa<CR>
-nnoremap <Leader>W :%s/\s\+$//<CR>:let @/=''<CR>
+
+" Set indents and spacing on file (2 spaces)
 nnoremap <c-f> gg=G
+
+nnoremap <Leader>W :%s/\s\+$//<CR>:let @/=''<CR>
+
+" Shortcut for opening vimrc
 map <Leader>v :tabe ~/.vimrc<CR>
+
 autocmd! bufwritepost .vimrc source % 
+
+" Short cut for reloading current file
 nnoremap <leader>r :e!<CR>
+
+" Set hybrid number system
+set relativenumber
+set number
 
 " Map ; to :
 nmap ; :
 
+" Taglist settings 
+let Tlist_Use_Right_Window = 1
+nnoremap <silent> <leader>t :TlistToggle<CR>
+let Tlist_Auto_Highlight_Tag = 1
+let Tlist_WinWidth = 40
+
 " Enable hardmode by default
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+"autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " Go to tab by number
 noremap <leader>1 :tabprevious<CR>
@@ -92,7 +115,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
 
 "ctrlP Configurations
 let g:ctrlp_switch_buffer = 0
