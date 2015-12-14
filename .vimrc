@@ -20,12 +20,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'wikitopian/hardmode'
 Plugin 'taglist.vim'
 Plugin 'Raimondi/delimitMate'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on
 
 syntax enable
-color Monokai
+colorscheme Monokai
 let mapleader = "\<Space>"
 set encoding=utf-8
 let g:ctrlp_map = '<leader>p'
@@ -103,6 +104,13 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" Resize vim buffers in accordance to tmux panes
+autocmd VimResized * :wincmd =
+
+" Zooming into a vim split within a tmux pane
+nnoremap <leader>- :wincmd _<CR>:wincmd \|<CR>
+nnoremap <leader>= :wincmd =<CR>
 
 "Airline Configurations
 autocmd VimEnter * AirlineToggleWhitespace
