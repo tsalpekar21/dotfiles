@@ -12,7 +12,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
-"Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/MatchTagAlways'
@@ -20,12 +20,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'wikitopian/hardmode'
 Plugin 'taglist.vim'
 Plugin 'Raimondi/delimitMate'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on
 
 syntax enable
-color Monokai
+colorscheme monokai
 let mapleader = "\<Space>"
 set encoding=utf-8
 let g:ctrlp_map = '<leader>p'
@@ -44,6 +45,11 @@ set incsearch
 set hlsearch
 set noswapfile
 set shiftwidth=2
+
+" Supress conf error for YouCompleteMe
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+
+" Set faster vim scrolling
 set ttyfast
 set lazyredraw
 
@@ -72,6 +78,12 @@ set number
 " Map ; to :
 nmap ; :
 
+" Taglist settings 
+let Tlist_Use_Right_Window = 1
+nnoremap <silent> <leader>t :TlistToggle<CR>
+let Tlist_Auto_Highlight_Tag = 1
+let Tlist_WinWidth = 40
+
 " Enable hardmode by default
 "autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
@@ -92,6 +104,13 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" Resize vim buffers in accordance to tmux panes
+autocmd VimResized * :wincmd =
+
+" Zooming into a vim split within a tmux pane
+nnoremap <leader>- :wincmd _<CR>:wincmd \|<CR>
+nnoremap <leader>= :wincmd =<CR>
 
 "Airline Configurations
 autocmd VimEnter * AirlineToggleWhitespace

@@ -26,7 +26,7 @@ call vundle#end()
 filetype plugin indent on
 
 syntax enable
-colorscheme Monokai
+colorscheme monokai
 let mapleader = "\<Space>"
 set encoding=utf-8
 let g:ctrlp_map = '<leader>p'

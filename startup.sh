@@ -7,7 +7,7 @@ function CheckAndCreateFiles {
   if [ -f ~/$CONFIG_FILE ] 
     then
       # If actual file was found, copy it to dotfiles dir and back it up 
-      cp ~/$CONFIG_FILE ~/dotfiles/.backup$CONFIG_FILE
+      cp ~/$CONFIG_FILE ~/dotfiles/backups/.backup$CONFIG_FILE
       
       # If symbolic link is found, remove the link
       if [ -h ~/$CONFIG_FILE ] 
@@ -65,7 +65,7 @@ function MoveColors {
   echo "-----------------"
 }
 
-FILES=('.bash_profile' '.vimrc' '.gitconfig' '.tmux.conf')
+FILES=('.bash_profile' '.vimrc' '.gitconfig' '.tmux.conf', '.zshrc')
 
 echo " "
 
