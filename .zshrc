@@ -27,7 +27,8 @@ export PATH="/Users/tanaysalpekar/.rvm/gems/ruby-2.1.2/bin:/Users/tanaysalpekar/
 source $ZSH/oh-my-zsh.sh
 
 # Example aliases
- alias ..z="vim ~/.zshrc"
- alias ..v="vim ~/.vimrc"
- alias ..t="vim ~/.tmux_conf"
-
+alias ..z="vim ~/.zshrc"
+alias ..v="vim ~/.vimrc"
+alias ..t="vim ~/.tmux_conf"
+alias cdcl="cd ~/Documents/Class" 
+alias cdco="cd ~/Documents/corkcrm" 

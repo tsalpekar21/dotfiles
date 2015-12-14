@@ -132,6 +132,7 @@ let g:ctrlp_working_path_mode = 0
 "NERDTree configurations
 let NERDTreeWinSize=25
 let NERDTreeMouseMode=2
+let NERDTreeQuitOnOpen=1
 
 set laststatus=2
 set ttimeoutlen=50
