@@ -31,3 +31,5 @@
   remote = origin
   merge = refs/heads/master
 
+[core]
+	excludesFile = /Users/tanaysalpekar/.gitignore_global

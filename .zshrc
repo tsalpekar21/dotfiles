@@ -21,14 +21,17 @@ plugins=(rails git hub)
 
 # User configuration
 
-export PATH="/Users/tanaysalpekar/.rvm/gems/ruby-2.1.2/bin:/Users/tanaysalpekar/.rvm/gems/ruby-2.1.2@global/bin:/Users/tanaysalpekar/.rvm/rubies/ruby-2.1.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/tanaysalpekar/.rvm/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$PATH:/Users/tanaysalpekar/.rvm/gems/ruby-2.1.2/bin:/Users/tanaysalpekar/.rvm/gems/ruby-2.1.2@global/bin:/Users/tanaysalpekar/.rvm/rubies/ruby-2.1.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/tanaysalpekar/.rvm/bin"
 
 source $ZSH/oh-my-zsh.sh
 
 # Example aliases
 alias ..z="vim ~/.zshrc"
 alias ..v="vim ~/.vimrc"
-alias ..t="vim ~/.tmux_conf"
+alias ..t="vim ~/.tmux.conf"
 alias cdcl="cd ~/Documents/Class" 
 alias cdco="cd ~/Documents/corkcrm" 
+alias cdch="cd ~/Documents/Chat" 
+alias sshchat="ssh -i ~/Secrets/chat.pem ec2-user@ec2-54-201-93-240.us-west-2.compute.amazonaws.com"
+alias c="clear" 
+alias sz="source ~/.zshrc" 
